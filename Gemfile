@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass', '~>3.3.5.1'
+gem 'simple_form'
 gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 # Use jquery as the JavaScript library
