@@ -22,6 +22,8 @@ gem 'simple_form'
 gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 gem 'devise', '>=3.2.4'
+gem 'geocoder'
+gem "figaro", ">= 1.0.0"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
