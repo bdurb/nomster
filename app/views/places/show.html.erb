@@ -33,7 +33,7 @@ function initMap() {
 <div id="map"></div>
 <% end %>
 
-<%= simple_form_for @photo, url: 'x' do |f| %>
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
     <%= f.input :caption %>
     <%= f.submit "Add a photo!", class: 'btn btn-primary' %>
     <% end %>
