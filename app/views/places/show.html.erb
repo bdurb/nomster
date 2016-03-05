@@ -33,15 +33,7 @@ function initMap() {
 <div id="map"></div>
 <% end %>
 <br />
-<h1>Photos</h1>
 
-<% @place.photos.each do |photo| %>
-  <div>
-    <blockquote>
-      <b><%= photo.caption %></b> -
-    </blockquote>
-  </div>
-<% end %>
 
 
 
@@ -58,10 +50,18 @@ function initMap() {
 
 <div class="clear"></div>
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+    <%= f.input :picture %>
     <%= f.input :caption %>
     <%= f.submit "Add a photo!", class: 'btn btn-primary' %>
     <% end %>
 
+<h1>Photos</h1>
+
+<% @place.photos.each do |photo| %>
+<div class="col-xs-12 col-sm-6">
+   <%= image_tag photo.picture %>
+   <%= photo.caption %>
+<% end %>
 
 
 <!-- Modal -->
