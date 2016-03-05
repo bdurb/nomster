@@ -10,6 +10,10 @@
 	<small><%= place.user.email %></small>
 	<% end %>
 
+  <% if place.photos.present? && place.photos.last.picture.present? %>
+  <p><%= image_tag place.photos.last.picture, :class => 'col-xs-10 col-sm-2 img-responsive' %></p>
+  <% end %>
+
 <% if place.comments.present? %>
   <div class="col-xs-12">
     <blockquote>
