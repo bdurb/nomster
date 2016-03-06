@@ -3,9 +3,9 @@ class NotificationMailer < ActionMailer::Base
 
   def comment_added(comment)
   	@place = comment.place
-  	@place_owner = @place_owner.email,
-  	mail(to: "brian@rpmgreenville.com",
-         subject: "A comment has been added to your place")
+  	@place_owner = @place.user
+  	mail(to: @place_owner.email,
+         subject: "A comment has been added to your #{@place.name}")
   end
 
 end
